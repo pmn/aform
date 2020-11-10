@@ -12,22 +12,22 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>My Cool Project</h1>
+
   <div class="container">
+    <h1>My Cool Project</h1>
 <p>
   <h3>Have some feedback? Leave it here and we'll get back to you!</h3>
 </p>
   <form method=post id="feedbackform">
-    <div>
-      <label for="name">Your name:</label>
-      <input type="text" name="name" placeholder="your name here" /><br />
+    <div class="form-group">
+        <label for="name">Your name:</label>
+        <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter your name">
     </div>
-    <div>
-      <label for="suggestion">Your suggestion:</label><br />
-      <textarea name="suggestion" placeholder="your feedback goes here"></textarea>
+    <div class="form-group">
+      <label for="suggestion">Your suggestion:</label>
+      <textarea class="form-control" id="suggestion" name="suggestion" rows="3"></textarea>
     </div>
-    <div>
-      <button id="btnSend">Send it!</button>
+      <button id="btnSend" class="btn btn-primary">Send it!</button>
     </div>
   </form>
   </div>
