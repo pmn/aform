@@ -14,7 +14,12 @@
 </p>
   <form method=post id="feedbackform">
     <div>
-      <textarea name="feedbacktext" placeholder="your feedback goes here"></textarea>
+      <label for="name">Your name:</label>
+      <input type="text" name="name" placeholder="your name here" />
+    </div>
+    <div>
+      <label for="suggestion">Your suggestion:</label><br>
+      <textarea name="suggestion" placeholder="your feedback goes here"></textarea>
     </div>
     <div>
       <button id="btnSend">Send it!</button>
@@ -34,10 +39,11 @@
     // Get some values from elements on the page:
     var $form = $( this ),
       feedback = $form.find( "textarea[name='feedbacktext']" ).val(),
+        name = $form.find("input[name='name']").val(),
       url = "https://ab.bot/api/skills/form-handler/trigger/6CWX2PCLBDZGJJdHgxW6MRY5";
 
     // Send the data using post
-    var posting = $.post( url, { feedback: feedback } );
+    var posting = $.post( url, { suggestion: feedback, name: name } );
 
     // Put the results in a div
     posting.done(function( data ) {
