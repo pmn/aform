@@ -1,5 +1,9 @@
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leave feedback on my cool project</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <script
@@ -9,6 +13,7 @@
 </head>
 <body>
 <h1>My Cool Project</h1>
+  <div class="container">
 <p>
   <h3>Have some feedback? Leave it here and we'll get back to you!</h3>
 </p>
@@ -25,10 +30,8 @@
       <button id="btnSend">Send it!</button>
     </div>
   </form>
-  <script language="text/javascript">
-  console.log("yep.");
-  </script>
-  
+  </div>
+
   <script>
   // Attach a submit handler to the form
   $( "#feedbackform" ).submit(function( event ) {
